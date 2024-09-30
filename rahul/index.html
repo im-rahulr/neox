@@ -1,237 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Attendance Checker</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Full Page iFrame</title>
+  <style>
+    /* General styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+    }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .popup {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-        }
-
-        .popup-content {
-            position: relative;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            width: 300px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .popup-content h2 {
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-            color: #333;
-        }
-
-        .popup-content input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            text-align: center;
-            box-sizing: border-box;
-            color: #4CAF50;
-        }
-
-        .popup-content input::placeholder {
-            color: #1e3f77;
-        }
-
-        .popup-content input:focus {
-            color: #351d24;
-            outline: none;
-        }
-
-        .check-btn {
-            padding: 10px 20px;
-            background-color: #6c9a6e;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            font-size: 1rem;
-        }
-
-        .check-btn:hover {
-            background-color: #21bbc3;
-            transform: scale(1.05);
-        }
-
-        .check-btn:active {
-            transform: scale(0.95);
-        }
-
-        .success, .error {
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-
-        .success {
-            color: #4CAF50;
-        }
-
-        .error {
-            color: #f44336;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #333;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close-btn:hover {
-            color: #f44336;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.8rem;
-            color: #666;
-            padding: 10px;
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-        }
-    </style>
+    /* Full-screen iframe styles */
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="content">
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <button id="closeButton" class="close-btn">&times;</button>
-                <h2>Check your Attendance</h2>
-                <input type="text" id="nameInput" placeholder="Enter your name Rahul">
-                <button id="checkButton" class="check-btn">Check</button>
-                <div id="successMessage" class="success" style="display: none;">Successful Login, Redirecting...</div>
-                <div id="errorMessage" class="error" style="display: none;">Invalid name. Please try again or contact admin.</div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Rahul. All rights reserved.</p>
-    </footer>
-
-    <script>
-        let placeholderInterval;
-        let isHovering = false;
-        let isFocused = false;
-
-        const placeholderSpeed = 1000; // Faster placeholder cycling (1 second)
-
-        window.onload = function() {
-            const popup = document.getElementById('popup');
-            popup.style.display = 'flex';
-            cyclePlaceholder();
-
-            document.getElementById('year').textContent = new Date().getFullYear();
-        };
-
-        document.getElementById('checkButton').addEventListener('click', function() {
-            const name = document.getElementById('nameInput').value.trim().toLowerCase();
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-
-            if (name === 'rahul' || name === 'chirag' || name === 'praveen' || name === 'vishal' || name === 'sanjay' || name === 'sofi') {
-                successMessage.style.display = 'block';
-                errorMessage.style.display = 'none';
-
-                setTimeout(() => {
-                    if (name === 'rahul') {
-                        window.location.href = 'https://dev-rahulr.pantheonsite.io/rahul/';
-                    } else if (name === 'chirag') {
-                        window.location.href = 'https://dev-rahulr.pantheonsite.io/chiru/';
-                    } else if (name === 'praveen') {
-                        window.location.href = 'https://dev-rahulr.pantheonsite.io/praveen-kumar/';
-                    } else if (name === 'vishal') {
-                        window.location.href = 'https://dev-rahulr.pantheonsite.io/vishal/';
-                    } else if (name === 'sanjay') {
-                        window.location.href = 'https://dev-rahulr.pantheonsite.io/sanjay-baby/';
-                    } else if (name === 'sofi') {
-                        window.location.href = 'https://dev-rahulr.pantheonsite.io/sofi/';
-                    }
-                }, 2000);
-            } else {
-                errorMessage.style.display = 'block';
-                successMessage.style.display = 'none';
-            }
-        });
-
-        function cyclePlaceholder() {
-            const input = document.getElementById('nameInput');
-            const names = ['Rahul✨', 'Chirag❤️', 'Priya🌑'];
-            let index = 0;
-
-            placeholderInterval = setInterval(() => {
-                if (!isHovering && !isFocused) {
-                    input.setAttribute('placeholder', `Enter your name ${names[index]}`);
-                    index = (index + 1) % names.length;
-                }
-            }, placeholderSpeed);
-        }
-
-        document.getElementById('nameInput').addEventListener('mouseover', stopPlaceholder);
-        document.getElementById('nameInput').addEventListener('focus', stopPlaceholder);
-        document.getElementById('nameInput').addEventListener('mouseout', resumePlaceholder);
-        document.getElementById('nameInput').addEventListener('blur', resumePlaceholder);
-
-        function stopPlaceholder() {
-            isHovering = true;
-            isFocused = true;
-            clearInterval(placeholderInterval);
-        }
-
-        function resumePlaceholder() {
-            isHovering = false;
-            isFocused = false;
-            cyclePlaceholder();
-        }
-
-        document.getElementById('closeButton').addEventListener('click', function() {
-            window.location.href = 'https://dev-rahulr.pantheonsite.io/main/';
-        });
-    </script>
+  <!-- Full-page iframe -->
+  <iframe src="https://dev-neoai.pantheonsite.io/imrahul/" title="Responsive iFrame" frameborder="0"></iframe>
 
 </body>
 </html>
