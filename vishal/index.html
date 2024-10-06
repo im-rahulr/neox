@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vishal </title>
+  <title>Vishal </title>
   <style>
     /* General styles */
     body, html {
@@ -25,14 +25,32 @@
   </style>
 
   <script>
-    // Function to refresh the iframe every 30 seconds
-    setInterval(function() {
-        // Get the iframe element
-        var iframe = document.querySelector('iframe');
-        
-        // Append a unique timestamp to the iframe's src to force reload without cache
-        iframe.src = iframe.src.split('?')[0] + '?t=' + new Date().getTime();
-    }, 30000); // 30000ms = 30 seconds
+    let autoRefreshInterval;
+
+    // Function to refresh the iframe every 30 seconds and refresh the main page
+    function startAutoRefresh() {
+        autoRefreshInterval = setInterval(function() {
+            // Get the iframe element
+            var iframe = document.querySelector('iframe');
+
+            // Append a unique timestamp to the iframe's src to force reload without cache
+            iframe.src = iframe.src.split('?')[0] + '?t=' + new Date().getTime();
+
+            // Reload the main page to refresh https://dev-neoai.pantheonsite.io/
+            window.location.href = window.location.href.split('?')[0] + '?t=' + new Date().getTime();
+        }, 30000); // 30000ms = 30 seconds
+    }
+
+    // Listen for manual page refresh (unload)
+    window.addEventListener('beforeunload', function () {
+        // Clear the auto-refresh interval when the page is manually refreshed
+        clearInterval(autoRefreshInterval);
+    });
+
+    // Start auto-refresh when the page is loaded
+    window.addEventListener('load', function() {
+        startAutoRefresh();
+    });
   </script>
 </head>
 <body>
