@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Full Page iFrame</title>
+  <title>Sanjay Baby 😗</title>
   <style>
     /* General styles */
     body, html {
@@ -23,17 +23,22 @@
         border: none;
     }
   </style>
+
   <script>
-    // Function to reload the page every 30 seconds
-    setInterval(function(){
-        location.reload();
-    }, 30000); // 30000 milliseconds = 30 seconds
+    // Function to refresh the iframe every 30 seconds
+    setInterval(function() {
+        // Get the iframe element
+        var iframe = document.querySelector('iframe');
+        
+        // Append a unique timestamp to the iframe's src to force reload without cache
+        iframe.src = iframe.src.split('?')[0] + '?t=' + new Date().getTime();
+    }, 30000); // 30000ms = 30 seconds
   </script>
 </head>
 <body>
 
   <!-- Full-page iframe -->
-  <iframe src="https://dev-neoai.pantheonsite.io/sanjay/" title="Responsive iFrame" frameborder="0"></iframe>
+  <iframe src="https://dev-neoai.pantheonsite.io/sanjay/" title="Responsive iFrame"></iframe>
 
 </body>
 </html>
