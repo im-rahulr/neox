@@ -1,62 +1,1188 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home page</title>
-  <style>
-    /* General styles */
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-    }
+<html lang="en-US">
+<head >
 
-    /* Full-screen iframe styles */
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Aiair - ">
+<link rel="pingback" href="https://dev-gcu.pantheonsite.io/xmlrpc.php" />
+<title>Rahul &#8211; Aiair</title>
+<meta name='robots' content='max-image-preview:large' />
+<!-- Google tag (gtag.js) Consent Mode dataLayer added by Site Kit -->
+<script id='google_gtagjs-js-consent-mode-data-layer'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500});
+window._googlesitekitConsentCategoryMap = {"statistics":["analytics_storage"],"marketing":["ad_storage","ad_user_data","ad_personalization"],"functional":["functionality_storage","security_storage"],"preferences":["personalization_storage"]};
+window._googlesitekitConsents = {"ad_personalization":"denied","ad_storage":"denied","ad_user_data":"denied","analytics_storage":"denied","functionality_storage":"denied","security_storage":"denied","personalization_storage":"denied","region":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"],"wait_for_update":500}</script>
+<!-- End Google tag (gtag.js) Consent Mode dataLayer added by Site Kit -->
+			<link rel='dns-prefetch' href='//dev-gcu.pantheonsite.io' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Aiair &raquo; Feed" href="https://dev-gcu.pantheonsite.io/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Aiair &raquo; Comments Feed" href="https://dev-gcu.pantheonsite.io/comments/feed/" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v9.0.1 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-DZLT8YDP5X"  data-cfasync="false" data-wpfc-render="false" async></script>
+			<script data-cfasync="false" data-wpfc-render="false">
+				var mi_version = '9.0.1';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var MonsterInsightsDefaultLocations = {"page_location":"https:\/\/dev-gcu.pantheonsite.io\/rahul\/"};
+				if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations );
+				} else {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations;
+				}
 
-  <script>
-    let autoRefreshInterval;
+								var disableStrs = [
+										'ga-disable-G-DZLT8YDP5X',
+									];
 
-    // Function to refresh the iframe every 30 seconds and refresh the main page
-    function startAutoRefresh() {
-        autoRefreshInterval = setInterval(function() {
-            // Get the iframe element
-            var iframe = document.querySelector('iframe');
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
 
-            // Append a unique timestamp to the iframe's src to force reload without cache
-            iframe.src = iframe.src.split('?')[0] + '?t=' + new Date().getTime();
+					return false;
+				}
 
-            // Reload the main page to refresh https://dev-neoai.pantheonsite.io/
-            window.location.href = window.location.href.split('?')[0] + '?t=' + new Date().getTime();
-        }, 30000); // 30000ms = 30 seconds
-    }
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
 
-    // Listen for manual page refresh (unload)
-    window.addEventListener('beforeunload', function () {
-        // Clear the auto-refresh interval when the page is manually refreshed
-        clearInterval(autoRefreshInterval);
-    });
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
 
-    // Start auto-refresh when the page is loaded
-    window.addEventListener('load', function() {
-        startAutoRefresh();
-    });
-  </script>
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+					if ( MonsterInsightsLocations.page_location ) {
+						__gtagTracker('set', MonsterInsightsLocations);
+					}
+										__gtagTracker('config', 'G-DZLT8YDP5X', {"forceSSL":"true","link_attribution":"true"} );
+															window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+		<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/dev-gcu.pantheonsite.io\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--cardo: Cardo;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=9.1.4' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=9.1.4' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=9.1.4' media='all' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='liquid_wc-css' href='https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/liquid/vendors/woocommerce/css/liquid_wc.min.css' media='all' />
+<link rel='stylesheet' id='theme-shop-css' href='https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/css/themes/aihub/theme.shop.css?ver=6.6.2' media='all' />
+<link rel='stylesheet' id='liquid-wp-style-css' href='https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/style.css?ver=6.6.2' media='all' />
+<link rel='stylesheet' id='liquid-utils-css' href='https://dev-gcu.pantheonsite.io/wp-content/uploads/liquid-styles/liquid-utils.css' media='all' />
+<link rel='stylesheet' id='liquid-theme-css' href='https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/css/themes/aihub/theme.css?ver=6.6.2' media='all' />
+<link rel='stylesheet' id='liquid-gdpr-box-css' href='https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/liquid-gdpr/liquid-gdpr.min.css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.24.2' media='all' />
+<style id='elementor-frontend-inline-css'>
+.elementor-kit-12{--e-global-color-primary:#7458E8;--e-global-color-secondary:#A860E6;--e-global-color-text:#3B495C;--e-global-color-accent:#7458E8;--e-global-color-bed91c7:#271340;--e-global-color-2800a13:#3B495C;--e-global-color-2c0fac0:#ECEAF8;--e-global-color-a578634:#E9C4E6;--e-global-color-ef8b4ac:#D2CDE2;--e-global-color-9d45fba:#EAEDFB;--e-global-color-b3e7c98:#8D65E9;--e-global-color-650d3e9:#5391E4;--e-global-color-108bbf8:#6BCD94;--e-global-color-e671c32:#3D9BFC;--e-global-color-425c5f6:#7B40E4;--e-global-color-526777e:#F53A8B;--e-global-color-23cd0c6:#EE704A;--e-global-color-6e44a23:#FFFFFF;--e-global-color-2353384:#A48FDE;--e-global-color-cbe246d:#36A5F7;--e-global-color-f75e874:#7B77EB;--e-global-color-6fdd55d:#C97AF3;--e-global-color-d6440e9:#85D1EA;--e-global-color-c645c21:#03071C;--e-global-color-8af929f:#FFFFFFBF;--e-global-color-727b487:#FFFFFF;--e-global-typography-primary-font-family:"Golos Text";--e-global-typography-primary-font-size:14px;--e-global-typography-primary-font-weight:500;--e-global-typography-primary-line-height:1.42em;--e-global-typography-text-font-family:"Golos Text";--e-global-typography-text-font-size:14px;--e-global-typography-text-font-weight:500;--e-global-typography-text-line-height:1.42em;--e-global-typography-a2a42e5-font-family:"Roboto Mono";--e-global-typography-a2a42e5-font-size:11px;--e-global-typography-a2a42e5-font-weight:700;--e-global-typography-a2a42e5-text-transform:uppercase;--e-global-typography-a2a42e5-letter-spacing:0.125em;--e-global-typography-2e5ca9e-font-size:16px;--e-global-typography-2e5ca9e-line-height:1.43em;--lqd-body-font-family:var( --e-global-typography-text-font-family ), Sans-serif;--lqd-body-font-size:var( --e-global-typography-text-font-size );--lqd-body-font-weight:var( --e-global-typography-text-font-weight );--lqd-body-line-height:var( --e-global-typography-text-line-height );--lqd-body-text-color:var(--e-global-color-2800a13);--lqd-heading-font-family:"Space Grotesk", Sans-serif;--lqd-heading-font-weight:500;--lqd-heading-line-height:1.06em;--lqd-heading-color:var(--e-global-color-bed91c7);--lqd-h1-font-size:59px;--lqd-h1-line-height:1em;--lqd-h1-letter-spacing:-0.02em;--lqd-h2-font-size:54px;--lqd-h2-line-height:1.1em;--lqd-h2-letter-spacing:-0.01em;--lqd-h3-font-size:43px;--lqd-h4-font-size:24px;--lqd-h5-font-size:22px;--lqd-h6-font-family:"Golos Text", Sans-serif;--lqd-h6-font-size:11px;--lqd-h6-font-weight:500;}.elementor-kit-12 e-page-transition{background-color:#FFBC7D;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;--container-default-padding-top:0px;--container-default-padding-right:0px;--container-default-padding-bottom:0px;--container-default-padding-left:0px;}.elementor-widget:not(:last-child){margin-block-end:0px;}.elementor-element{--widgets-spacing:0px 0px;}{}h1.entry-title{display:var(--page-title-display);}.elementor-kit-12.has-sidebar #lqd-contents-wrap{padding-top:25px;}.elementor-kit-12 #lqd-gdpr{font-size:14px;}[data-lqd-page-color-scheme=dark]{--lqd-body-text-color:var(--e-global-color-8af929f);}[data-lqd-page-color-scheme=dark], .elementor-kit-12[data-lqd-page-color-scheme=dark]{background:var(--e-global-color-c645c21);}.elementor-kit-12 [data-lqd-color-scheme=dark].e-con{--lqd-container-text-color:#FFFFFF72;color:var(--lqd-container-text-color);background:#23232D;}[data-lqd-page-color-scheme=dark], .elementor-kit-12 [data-lqd-color-scheme=dark]{--lqd-heading-color:var(--e-global-color-727b487);}.elementor-kit-12 .lqd-btn{font-size:13px;font-weight:500;}.elementor-kit-12 .lqd-btn:hover{transform:translateY(-0.25em);}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}.elementor-kit-12{--lqd-body-font-size:var( --e-global-typography-text-font-size );--lqd-body-line-height:var( --e-global-typography-text-line-height );}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}.elementor-kit-12{--lqd-body-font-size:var( --e-global-typography-text-font-size );--lqd-body-line-height:var( --e-global-typography-text-line-height );--lqd-h2-font-size:48px;}}
+.elementor-7261 .elementor-element.elementor-element-1c1d7ab9{--display:flex;--flex-direction:row;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--justify-content:space-between;--align-items:center;--gap:0px 0px;--background-transition:0.3s;--padding-top:12px;--padding-bottom:15px;--padding-left:25px;--padding-right:25px;--z-index:1;}.elementor-7261 .elementor-element.elementor-element-7cb75fd7{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-64b1f99d{--display:flex;--flex-direction:row;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--justify-content:flex-end;--align-items:center;--gap:7px 7px;--background-transition:0.3s;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-749b5749, .elementor-7261 .elementor-element.elementor-element-749b5749 [data-lqd-color-scheme=dark], .elementor-7261 .elementor-element.elementor-element-749b5749[data-lqd-color-scheme=dark], .elementor [data-lqd-color-scheme=dark] .elementor-element.elementor-element-749b5749, .elementor .elementor-element.elementor-element-749b5749[data-lqd-color-scheme=dark]{display:block;}.elementor-7261 .elementor-element.elementor-element-749b5749{display:none;--lqd-ds-fz:21px;--lqd-ds-w:36px;--lqd-ds-h:36px;--lqd-ds-color:#5E6075;--lqd-ds-brs:solid;--lqd-ds-brw:1px 1px 1px 1px;--lqd-ds-brwt:1px;--lqd-ds-brwe:1px;--lqd-ds-brwb:1px;--lqd-ds-brws:1px;--lqd-ds-brc:#00000019;}.elementor-7261 .elementor-element.elementor-element-749b5749 .lqd-dark-switch-switch:hover{--lqd-ds-color:#FFFFFF;--lqd-ds-bg:#000000;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-749b5749{--lqd-ds-color:#FFFFFF;}[data-lqd-color-scheme=dark].elementor-element.elementor-element-749b5749, [data-lqd-color-scheme=dark] .elementor-element.elementor-element-749b5749{--lqd-ds-color:#000000;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-749b5749, [data-lqd-color-scheme=dark].elementor-element.elementor-element-749b5749, [data-lqd-color-scheme=dark] .elementor-element.elementor-element-749b5749{--lqd-ds-brs:solid;--lqd-ds-brc:#FFFFFF33;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-749b5749 .lqd-dark-switch-switch:hover{--lqd-ds-color:#000000;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-749b5749 .lqd-dark-switch-switch:hover, [data-lqd-color-scheme=dark].elementor-element.elementor-element-749b5749, [data-lqd-color-scheme=dark] .elementor-element.elementor-element-749b5749{--lqd-ds-bg:#FFFFFF;}{{SELECTOR}} .elementor-repeater-item-efbe427-6dc46702{background:#000000;}{{SELECTOR}} .elementor-repeater-item-f203efa-6dc46702{background:#FFFFFF;}.elementor-7261 .elementor-element.elementor-element-6dc46702.elementor-element{--align-self:center;}.elementor-7261 .elementor-element.elementor-element-6dc46702{z-index:2;}.elementor-7261 .elementor-element.elementor-element-6dc46702 .lqd-btn:hover{transform:translateY(-0.25em);color:#FFFFFF;box-shadow:0px 4px 30px 0px rgba(0, 0, 0, 0.11);}.elementor-7261 .elementor-element.elementor-element-6dc46702 .lqd-btn{font-size:13px;line-height:20px;--lqd-btn-pt:8px;--lqd-btn-pe:21px;--lqd-btn-pb:8px;--lqd-btn-ps:21px;--lqd-btn-brs:solid;--lqd-btn-brw:1px 1px 1px 1px;--lqd-btn-brwt:1px;--lqd-btn-brwe:1px;--lqd-btn-brwb:1px;--lqd-btn-brws:1px;border-color:#00000019;--lqd-btn-brrt:99px;--lqd-btn-brre:99px;--lqd-btn-brrb:99px;--lqd-btn-brrs:99px;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-6dc46702 .lqd-btn, .elementor-7261 .elementor-element.elementor-element-6dc46702[data-lqd-color-scheme=dark] .lqd-btn, .elementor [data-lqd-color-scheme=dark].elementor-element.elementor-element-6dc46702 .lqd-btn, .elementor [data-lqd-color-scheme=dark] .elementor-element.elementor-element-6dc46702 .lqd-btn{color:#FEFEFF;border-style:solid;border-color:#FFFFFF33;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-6dc46702 .lqd-btn:hover, .elementor-7261 .elementor-element.elementor-element-6dc46702[data-lqd-color-scheme=dark] .lqd-btn:hover, .elementor [data-lqd-color-scheme=dark].elementor-element.elementor-element-6dc46702 .lqd-btn:hover, .elementor [data-lqd-color-scheme=dark] .elementor-element.elementor-element-6dc46702 .lqd-btn:hover{color:var(--e-global-color-bed91c7);}.elementor-7261 .elementor-element.elementor-element-5ec4783b.elementor-element{--align-self:center;}.elementor-7261 .elementor-element.elementor-element-5ec4783b{z-index:2;}.elementor-7261 .elementor-element.elementor-element-5ec4783b .lqd-btn:hover{transform:translateY(-0.25em);box-shadow:0px 4px 30px 0px rgba(0, 0, 0, 0.11);}.elementor-7261 .elementor-element.elementor-element-5ec4783b .lqd-btn{font-size:13px;line-height:20px;--lqd-btn-pt:8px;--lqd-btn-pe:21px;--lqd-btn-pb:8px;--lqd-btn-ps:21px;--lqd-btn-brrt:99px;--lqd-btn-brre:99px;--lqd-btn-brrb:99px;--lqd-btn-brrs:99px;}[data-lqd-page-color-scheme=dark] .elementor-7261 .elementor-element.elementor-element-5ec4783b .lqd-btn, .elementor-7261 .elementor-element.elementor-element-5ec4783b[data-lqd-color-scheme=dark] .lqd-btn, .elementor [data-lqd-color-scheme=dark].elementor-element.elementor-element-5ec4783b .lqd-btn, .elementor [data-lqd-color-scheme=dark] .elementor-element.elementor-element-5ec4783b .lqd-btn{color:#000000;}{{SELECTOR}} .elementor-repeater-item-d73ef4c-414e8e22{background:#262626;}{{SELECTOR}} .elementor-repeater-item-b766fe4-414e8e22{background:#FFFFFF;}body:not(.rtl) .elementor-7261 .elementor-element.elementor-element-414e8e22{left:20px;}body.rtl .elementor-7261 .elementor-element.elementor-element-414e8e22{right:20px;}.elementor-7261 .elementor-element.elementor-element-414e8e22{bottom:25px;}.elementor-7261 .elementor-element.elementor-element-414e8e22 .lqd-btn:hover{transform:scale(1.1);box-shadow:0px 5px 55px 0px rgba(10, 201.00000000000003, 147.99999999999994, 0.5294117647058824);}.elementor-7261 .elementor-element.elementor-element-414e8e22 .lqd-btn{--lqd-btn-w:48px;--lqd-btn-h:48px;--lqd-btn-justify-content:center;--lqd-btn-pt:0px;--lqd-btn-pe:0px;--lqd-btn-pb:0px;--lqd-btn-ps:0px;--lqd-btn-brrt:50px;--lqd-btn-brre:50px;--lqd-btn-brrb:50px;--lqd-btn-brrs:50px;}.elementor-7261 .elementor-element.elementor-element-0114bd6{--display:flex;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-7a3fd69 .e-link-in-bio{--e-link-in-bio-identity-image-profile-position:center center;--background-overlay-opacity:0.5;}.elementor-7261 .elementor-element.elementor-element-a791940{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-c8f20dc{width:1000px;height:135px;--glow-blur-value:57px;}.elementor-7261 .elementor-element.elementor-element-c8f20dc svg{opacity:0.65;}.elementor-7261 .elementor-element.elementor-element-a1a1b0a{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-6d816bf{--iteration-count:infinite;--animation-duration:1200ms;}.elementor-7261 .elementor-element.elementor-element-6d816bf .elementor-headline{text-align:center;}.elementor-7261 .elementor-element.elementor-element-b16ac7a{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:0px 0px;--flex-wrap:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-4ff6a79{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-main-swiper .swiper-slide{border-radius:20px;border-color:#F4DEDE;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-swiper-button{font-size:20px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__header{border-block-end-color:#1E7ED8;border-block-end-width:7px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__image img{width:65px;height:65px;border-radius:22px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-star-rating{font-size:6px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-star-rating i:not(:last-of-type){margin-inline-end:14px;}.elementor-7261 .elementor-element.elementor-element-3ae5896{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-main-swiper .swiper-slide{border-radius:20px;border-color:#F4DEDE;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-swiper-button{font-size:20px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__header{border-block-end-color:#1E7ED8;border-block-end-width:7px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__image img{width:65px;height:65px;border-radius:22px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-star-rating{font-size:6px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-star-rating i:not(:last-of-type){margin-inline-end:14px;}.elementor-7261 .elementor-element.elementor-element-d703f46{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-main-swiper .swiper-slide{border-radius:20px;border-color:#F4DEDE;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-swiper-button{font-size:20px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__header{border-block-end-color:#1E7ED8;border-block-end-width:7px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__image img{width:65px;height:65px;border-radius:22px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-star-rating{font-size:6px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-star-rating i:not(:last-of-type){margin-inline-end:14px;}.elementor-7261 .elementor-element.elementor-element-b7a2740{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-main-swiper .swiper-slide{border-radius:20px;border-color:#F4DEDE;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-swiper-button{font-size:20px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__header{border-block-end-color:#1E7ED8;border-block-end-width:7px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__image img{width:65px;height:65px;border-radius:22px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-star-rating{font-size:6px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-star-rating i:not(:last-of-type){margin-inline-end:14px;}.elementor-7261 .elementor-element.elementor-element-aa022d7{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-main-swiper .swiper-slide{border-radius:20px;border-color:#F4DEDE;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-swiper-button{font-size:20px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__header{border-block-end-color:#1E7ED8;border-block-end-width:7px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__image img{width:65px;height:65px;border-radius:22px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-star-rating{font-size:6px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-star-rating i:not(:last-of-type){margin-inline-end:14px;}.elementor-7261 .elementor-element.elementor-element-061b9d6{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-main-swiper .swiper-slide{border-radius:20px;border-color:#F4DEDE;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-swiper-button{font-size:20px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__header{border-block-end-color:#1E7ED8;border-block-end-width:7px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__image img{width:65px;height:65px;border-radius:22px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-star-rating{font-size:6px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-star-rating i:not(:last-of-type){margin-inline-end:14px;}.elementor-7261 .elementor-element.elementor-element-ac55207{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-f099ab1{width:1000px;height:135px;}.elementor-7261 .elementor-element.elementor-element-2fa2d4a2{--display:flex;--flex-direction:row;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--justify-content:space-between;--align-items:center;--gap:30px 30px;--flex-wrap:wrap;--background-transition:0.3s;--padding-top:180px;--padding-bottom:150px;--padding-left:10px;--padding-right:10px;}.elementor-7261 .elementor-element.elementor-element-2fa2d4a2:not(.elementor-motion-effects-element-type-background), .elementor-7261 .elementor-element.elementor-element-2fa2d4a2 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:transparent;background-image:linear-gradient(180deg, #E8E4E4 0%, #FAFAFA 100%);}.elementor-7261 .elementor-element.elementor-element-2fa2d4a2, .elementor-7261 .elementor-element.elementor-element-2fa2d4a2::before{--border-transition:0.3s;}.elementor-7261 .elementor-element.elementor-element-122d76ed{z-index:2;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9{--lqd-trigger-bars-count:2;z-index:2;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-ul{flex-direction:row;flex-wrap:nowrap;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-ul, .elementor-7261 .elementor-element.elementor-element-1e8a83b9 > .elementor-widget-container{justify-content:start;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-li-top, .elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-link-top{justify-content:start;text-align:start;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-dropdown{flex-direction:column;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-li-top{font-size:14px;font-weight:500;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-li-top > .lqd-menu-dropdown{inset-inline-end:auto;inset-inline-start:0%;bottom:auto;top:100%;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-dropdown-trigger:after{bottom:calc(100% * -1);}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-trigger{font-size:16px;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-trigger-bars-shape{width:55px;height:55px;}.elementor-7261 .elementor-element.elementor-element-515ecbeb{--divider-border-style:solid;--divider-color:#F0F0F0;--divider-border-width:1px;width:100%;max-width:100%;z-index:2;}.elementor-7261 .elementor-element.elementor-element-515ecbeb .elementor-divider-separator{width:100%;}.elementor-7261 .elementor-element.elementor-element-515ecbeb .elementor-divider{padding-block-start:10px;padding-block-end:10px;}.elementor-7261 .elementor-element.elementor-element-641b69fd{width:var( --container-widget-width, 60% );max-width:60%;--container-widget-width:60%;--container-widget-flex-grow:0;z-index:2;}.elementor-7261 .elementor-element.elementor-element-641b69fd .lqd-text-el{font-size:14px;line-height:30px;letter-spacing:-0.2px;}.elementor-7261 .elementor-element.elementor-element-4651a83b{--grid-template-columns:repeat(0, auto);z-index:2;--icon-size:16px;--grid-column-gap:15px;--grid-row-gap:0px;}.elementor-7261 .elementor-element.elementor-element-4651a83b .elementor-widget-container{text-align:center;}.elementor-7261 .elementor-element.elementor-element-4651a83b .elementor-social-icon{background-color:#02010100;}.elementor-7261 .elementor-element.elementor-element-4651a83b .elementor-social-icon i{color:var( --e-global-color-text );}.elementor-7261 .elementor-element.elementor-element-4651a83b .elementor-social-icon svg{fill:var( --e-global-color-text );}.elementor-7261 .elementor-element.elementor-element-4651a83b .elementor-social-icon:hover i{color:var( --e-global-color-primary );}.elementor-7261 .elementor-element.elementor-element-4651a83b .elementor-social-icon:hover svg{fill:var( --e-global-color-primary );}body:not(.rtl) .elementor-7261 .elementor-element.elementor-element-14527ce3{left:0px;}body.rtl .elementor-7261 .elementor-element.elementor-element-14527ce3{right:0px;}.elementor-7261 .elementor-element.elementor-element-14527ce3{bottom:0px;z-index:0;width:100%;}.elementor-7261 .elementor-element.elementor-element-14527ce3 .your-class{text-align:options;}.elementor-7261 .elementor-element.elementor-element-14527ce3, .elementor-7261 .elementor-element.elementor-element-14527ce3 > .elementor-widget-container, .elementor-7261 .elementor-element.elementor-element-14527ce3 .lqd-particles-container, .elementor-7261 .elementor-element.elementor-element-14527ce3 canvas{height:400px;min-height:inherit;}.elementor-7261 .elementor-element.elementor-element-14527ce3 canvas{height:400px!important;}@media(max-width:1024px){.elementor-7261 .elementor-element.elementor-element-1c1d7ab9{--justify-content:flex-start;}.elementor-7261 .elementor-element.elementor-element-7a3fd69 .e-link-in-bio{--e-link-in-bio-identity-image-profile-position:center center;}.elementor-7261 .elementor-element.elementor-element-2fa2d4a2{--padding-top:180px;--padding-bottom:150px;--padding-left:20px;--padding-right:20px;}.elementor-7261 .elementor-element.elementor-element-641b69fd{--container-widget-width:80%;--container-widget-flex-grow:0;width:var( --container-widget-width, 80% );max-width:80%;}}@media(max-width:767px){.elementor-7261 .elementor-element.elementor-element-1c1d7ab9{--padding-top:15px;--padding-bottom:15px;--padding-left:15px;--padding-right:15px;}.elementor-7261 .elementor-element.elementor-element-7cb75fd7{--width:40px;}.elementor-7261 .elementor-element.elementor-element-64b1f99d{--width:62%;--gap:3px 3px;}.elementor-7261 .elementor-element.elementor-element-64b1f99d.e-con{--flex-grow:1;--flex-shrink:0;}.elementor-7261 .elementor-element.elementor-element-7a3fd69 .e-link-in-bio{--e-link-in-bio-identity-image-profile-position:center center;}.elementor-7261 .elementor-element.elementor-element-6d816bf .elementor-headline{text-align:center;}.elementor-7261 .elementor-element.elementor-element-dbbc826.elementor-arrows-yes .elementor-main-swiper{width:calc( 353px - 40px );}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-main-swiper{width:353px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-swiper-button{font-size:17px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .swiper-pagination-bullet{height:8px;width:8px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .swiper-horizontal .swiper-pagination-progressbar{height:8px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .swiper-pagination-fraction{font-size:8px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__header{padding-block-end:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__content{padding-block-start:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__header, .elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__name{font-size:19px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__title{font-size:14px;}.elementor-7261 .elementor-element.elementor-element-dbbc826 .elementor-testimonial__image + cite{margin-inline-start:14px;margin-inline-end:0;}.elementor-7261 .elementor-element.elementor-element-a118a44.elementor-arrows-yes .elementor-main-swiper{width:calc( 353px - 40px );}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-main-swiper{width:353px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-swiper-button{font-size:17px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .swiper-pagination-bullet{height:8px;width:8px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .swiper-horizontal .swiper-pagination-progressbar{height:8px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .swiper-pagination-fraction{font-size:8px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__header{padding-block-end:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__content{padding-block-start:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__header, .elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__name{font-size:19px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__title{font-size:14px;}.elementor-7261 .elementor-element.elementor-element-a118a44 .elementor-testimonial__image + cite{margin-inline-start:14px;margin-inline-end:0;}.elementor-7261 .elementor-element.elementor-element-b4b0776.elementor-arrows-yes .elementor-main-swiper{width:calc( 353px - 40px );}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-main-swiper{width:353px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-swiper-button{font-size:17px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .swiper-pagination-bullet{height:8px;width:8px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .swiper-horizontal .swiper-pagination-progressbar{height:8px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .swiper-pagination-fraction{font-size:8px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__header{padding-block-end:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__content{padding-block-start:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__header, .elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__name{font-size:19px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__title{font-size:14px;}.elementor-7261 .elementor-element.elementor-element-b4b0776 .elementor-testimonial__image + cite{margin-inline-start:14px;margin-inline-end:0;}.elementor-7261 .elementor-element.elementor-element-7f3eefe.elementor-arrows-yes .elementor-main-swiper{width:calc( 353px - 40px );}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-main-swiper{width:353px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-swiper-button{font-size:17px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .swiper-pagination-bullet{height:8px;width:8px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .swiper-horizontal .swiper-pagination-progressbar{height:8px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .swiper-pagination-fraction{font-size:8px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__header{padding-block-end:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__content{padding-block-start:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__header, .elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__name{font-size:19px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__title{font-size:14px;}.elementor-7261 .elementor-element.elementor-element-7f3eefe .elementor-testimonial__image + cite{margin-inline-start:14px;margin-inline-end:0;}.elementor-7261 .elementor-element.elementor-element-fc15129.elementor-arrows-yes .elementor-main-swiper{width:calc( 353px - 40px );}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-main-swiper{width:353px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-swiper-button{font-size:17px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .swiper-pagination-bullet{height:8px;width:8px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .swiper-horizontal .swiper-pagination-progressbar{height:8px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .swiper-pagination-fraction{font-size:8px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__header{padding-block-end:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__content{padding-block-start:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__header, .elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__name{font-size:19px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__title{font-size:14px;}.elementor-7261 .elementor-element.elementor-element-fc15129 .elementor-testimonial__image + cite{margin-inline-start:14px;margin-inline-end:0;}.elementor-7261 .elementor-element.elementor-element-99368f6.elementor-arrows-yes .elementor-main-swiper{width:calc( 353px - 40px );}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-main-swiper{width:353px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-swiper-button{font-size:17px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .swiper-pagination-bullet{height:8px;width:8px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .swiper-horizontal .swiper-pagination-progressbar{height:8px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .swiper-pagination-fraction{font-size:8px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__header{padding-block-end:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__content{padding-block-start:calc( 25px / 2 );}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__header, .elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__name{font-size:19px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__title{font-size:14px;}.elementor-7261 .elementor-element.elementor-element-99368f6 .elementor-testimonial__image + cite{margin-inline-start:14px;margin-inline-end:0;}.elementor-7261 .elementor-element.elementor-element-2fa2d4a2{--min-height:0px;--padding-top:120px;--padding-bottom:120px;--padding-left:20px;--padding-right:20px;}.elementor-7261 .elementor-element.elementor-element-122d76ed{width:100%;max-width:100%;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9 .lqd-menu-ul{flex-direction:row;flex-wrap:wrap;}.elementor-7261 .elementor-element.elementor-element-1e8a83b9{--lqd-menu-ul-gap:20px;--lqd-menu-link-pt:0px;--lqd-menu-link-pe:0px;--lqd-menu-link-pb:0px;--lqd-menu-link-ps:0px;}.elementor-7261 .elementor-element.elementor-element-641b69fd{--container-widget-width:100%;--container-widget-flex-grow:0;width:var( --container-widget-width, 100% );max-width:100%;}}@media(min-width:768px){.elementor-7261 .elementor-element.elementor-element-7cb75fd7{--width:25%;}.elementor-7261 .elementor-element.elementor-element-64b1f99d{--width:25%;}.elementor-7261 .elementor-element.elementor-element-4ff6a79{--width:33.3333%;}.elementor-7261 .elementor-element.elementor-element-3ae5896{--width:33.3333%;}.elementor-7261 .elementor-element.elementor-element-d703f46{--width:33.3333%;}.elementor-7261 .elementor-element.elementor-element-b7a2740{--width:33.3333%;}.elementor-7261 .elementor-element.elementor-element-aa022d7{--width:33.3333%;}.elementor-7261 .elementor-element.elementor-element-061b9d6{--width:33.3333%;}}@media(max-width:1024px) and (min-width:768px){.elementor-7261 .elementor-element.elementor-element-7cb75fd7{--width:45px;}.elementor-7261 .elementor-element.elementor-element-64b1f99d{--width:80%;}}
+</style>
+<link rel='stylesheet' id='swiper-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
+<link rel='stylesheet' id='e-swiper-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.24.2' media='all' />
+<link rel='stylesheet' id='elementor-pro-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.23.2' media='all' />
+<link rel='stylesheet' id='widget-link-in-bio-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/css/widget-link-in-bio.min.css?ver=3.24.2' media='all' />
+<link rel='stylesheet' id='widget-divider-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.24.2' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.2' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.24.2' media='all' />
+<link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Golos+Text%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Mono%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSpace+Grotesk%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.6.2' media='all' />
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=9.0.1" id="monsterinsights-frontend-script-js"></script>
+<script data-cfasync="false" data-wpfc-render="false" id='monsterinsights-frontend-script-js-extra'>var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/dev-gcu.pantheonsite.io","hash_tracking":"false","v4_id":"G-DZLT8YDP5X"};</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.1.4" id="jquery-blockui-js" defer data-wp-strategy="defer"></script>
+<script id="wc-add-to-cart-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/dev-gcu.pantheonsite.io\/?page_id=7","is_cart":"","cart_redirect_after_add":"no"};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.1.4" id="wc-add-to-cart-js" defer data-wp-strategy="defer"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.1.4" id="js-cookie-js" defer data-wp-strategy="defer"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.1.4" id="woocommerce-js" defer data-wp-strategy="defer"></script>
+<script id="wc-cart-fragments-js-extra">
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_b361d6f8ae7f7dc170f3dd545eb92f56","fragment_name":"wc_fragments_b361d6f8ae7f7dc170f3dd545eb92f56","request_timeout":"5000"};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=9.1.4" id="wc-cart-fragments-js" defer data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="https://dev-gcu.pantheonsite.io/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://dev-gcu.pantheonsite.io/wp-json/wp/v2/pages/7261" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dev-gcu.pantheonsite.io/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.6.2" />
+<meta name="generator" content="WooCommerce 9.1.4" />
+<link rel="canonical" href="https://dev-gcu.pantheonsite.io/rahul/" />
+<link rel='shortlink' href='https://dev-gcu.pantheonsite.io/?p=7261' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://dev-gcu.pantheonsite.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdev-gcu.pantheonsite.io%2Frahul%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://dev-gcu.pantheonsite.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdev-gcu.pantheonsite.io%2Frahul%2F&#038;format=xml" />
+<!-- start Simple Custom CSS and JS -->
+<style>
+/* Broad CSS to hide all pop-ups */
+div[class*="popup"], div[id*="popup"] {
+    display: none !important;
+}
+</style>
+<!-- end Simple Custom CSS and JS -->
+<meta name="generator" content="Site Kit by Google 1.135.0" /><!-- Analytics by WP Statistics v14.10.1 - https://wp-statistics.com/ -->
+	
+					<link rel="shortcut icon" href="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/favicon.png" />
+		
+		
+				<script>
+				window.liquid = {"app":null,"behaviors":[],"loadedBehaviors":[],"breakpoints":{"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true}}};
+			</script>
+				<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Elementor 3.24.2; features: e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_element_cache; settings: css_print_method-internal, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<style id='wp-fonts-local'>
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+</style>
+
 </head>
-<body>
 
-  <!-- Full-page iframe -->
-  <iframe src="https://dev-neoai.pantheonsite.io/rahul/" title="Responsive iFrame"></iframe>
+<body class="page-template-default page page-id-7261 wp-embed-responsive theme-aihub woocommerce-no-js sidebar-widgets-outline elementor-default elementor-kit-12 elementor-page elementor-page-7261" dir="ltr" itemscope="itemscope" itemtype="http://schema.org/WebPage" data-mobile-nav-breakpoint="1200" data-localscroll-offset="500" data-mobile-nav-style="modern" data-mobile-nav-scheme="dark" data-mobile-nav-trigger-alignment="right" data-mobile-header-scheme="gray" data-mobile-logo-alignment="default">
+
+    <script>
+        let initPageColorScheme = 'system';
+        if ( initPageColorScheme === 'system' ) {
+            initPageColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                const color = event.matches ? 'dark' : 'light';
+                document.body.setAttribute('data-lqd-page-color-scheme', color);
+                localStorage.setItem('lqd-page-color-scheme', color)
+            });
+        }
+        const liquidPageColorScheme = localStorage.getItem('lqd-page-color-scheme');
+        const liquidTouchMM = window.matchMedia( "(pointer: coarse)" );
+        if ( initPageColorScheme === '' || initPageColorScheme === 'none' ) {
+            document.body.setAttribute('data-lqd-page-color-scheme', '');
+        } else {
+            if ( liquidPageColorScheme ) {
+                document.body.setAttribute('data-lqd-page-color-scheme', liquidPageColorScheme);
+            } else if ( initPageColorScheme && initPageColorScheme !== '' ) {
+                document.body.setAttribute('data-lqd-page-color-scheme', initPageColorScheme);
+            };
+        }
+        function liquidCheckTouch() {
+            if ( liquidTouchMM.matches ) {
+                document.body.classList.remove('lqd-no-touch');
+                document.body.classList.add('lqd-is-touch');
+            } else {
+                document.body.classList.remove('lqd-is-touch');
+                document.body.classList.add('lqd-no-touch');
+            }
+        }
+        liquidTouchMM.addEventListener( 'change', liquidCheckTouch );
+        liquidCheckTouch();
+    </script>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+    // Function to remove the popup
+    function removePopup() {
+        var popup = $('a[href="https://themeforest.net/item/aihub-ai-powered-startup-technology-wordpress-theme/47473638?s_rank=1"]');
+        if (popup.length) {
+            popup.remove();
+            console.log('Popup removed');
+        }
+    }
+
+    // Remove the popup immediately
+    removePopup();
+
+    // MutationObserver to watch for the popup being added to the DOM
+    var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            removePopup();
+        });
+    });
+
+    // Configure the observer to watch for changes in the entire document
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+</script>
+
+	<div><div class="screen-reader-text">Skip links</div><ul class="liquid-skip-link screen-reader-text"><li><a href="#primary-nav" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#lqd-site-content" class="screen-reader-shortcut"> Skip to content</a></li></ul></div>
+
+    <div id="lqd-wrap" class="relative overflow-hidden">
+
+        <header class="lqd-site-header z-99 lqd-site-header-overlay absolute start-0 end-0" id="lqd-page-header-wrap" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+
+    
+    <div id="lqd-page-header" data-lqd-view="liquidPageHeader">
+        <style>.elementor-5671 .elementor-element.elementor-element-98f199c{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}</style>		<div data-elementor-type="wp-post" data-elementor-id="5671" class="elementor elementor-5671" data-elementor-post-type="liquid-header">
+				<div class="elementor-element elementor-element-98f199c e-flex e-con-boxed e-con e-parent" data-id="98f199c" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-cdede9e elementor-widget elementor-widget-html" data-id="cdede9e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XR4LB3GS0S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XR4LB3GS0S');
+</script>		</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		    </div>
+</header>
+        <main class="z-2" id="lqd-page-content-wrap">
+
+            
+            <div id="lqd-page-content" data-lqd-view="liquidPageContent">
+
+            <div class="lqd-contents">				
+				<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Broad JavaScript to hide all pop-ups
+    var popups = document.querySelectorAll('div[class*="popup"], div[id*="popup"]');
+    popups.forEach(function(popup) {
+        popup.style.display = 'none';
+    });
+});
+</script>
+
+
+
+			<div data-elementor-type="wp-page" data-elementor-id="7261" class="elementor elementor-7261" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-1c1d7ab9 e-con-full e-flex e-con e-parent" data-id="1c1d7ab9" data-element_type="container">
+		<div class="elementor-element elementor-element-7cb75fd7 e-con-full e-flex e-con e-child" data-id="7cb75fd7" data-element_type="container">
+				<div class="elementor-element elementor-element-18653404 elementor-widget elementor-widget-lqd_site_logo" data-id="18653404" data-element_type="widget" data-widget_type="lqd_site_logo.default">
+				<div class="elementor-widget-container">
+			
+		<a class="lqd-logo flex p-0 relative" href="https://dev-gcu.pantheonsite.io/" rel="home"><img decoding="async" class="lqd-logo-dark hidden lqd-dark:block" src="https://staging.liquid-themes.com/ai-creative/wp-content/uploads/2023/08/logo-light.svg" alt="Aiair" />  <img decoding="async" class="lqd-logo-default lqd-dark:hidden" src="https://staging.liquid-themes.com/ai-creative/wp-content/uploads/2023/08/logo.svg" alt="Aiair" /></a>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-64b1f99d e-con-full e-flex e-con e-child" data-id="64b1f99d" data-element_type="container">
+				<div class="elementor-element elementor-element-749b5749 elementor-widget elementor-widget-lqd-dark-switch" data-id="749b5749" data-element_type="widget" data-widget_type="lqd-dark-switch.default">
+				<div class="elementor-widget-container">
+			
+		<div class="lqd-dark-switch-switch relative overflow-hidden cursor-pointer transition-colors user-select-none">
+			<input class="absolute w-0 h-0 invisible" id="lqd-switch-749b5749" class="lqd-switch-checkbox" type="checkbox" name="lqd-switch-749b5749">
+			<label class="cursor-pointer grid w-full h-full place-content-center" for="lqd-switch-749b5749">
+				<svg class="lqd-dark-switch-icon grid-area-1-1 transition-transform w-1em h-auto" data-dark-switch-icon="dark" fill="currentColor" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20" fill="currentColor"><path d="M480 936q-150 0-255-105T120 576q0-150 105-255t255-105q8 0 17 .5t23 1.5q-36 32-56 79t-20 99q0 90 63 153t153 63q52 0 99-18.5t79-51.5q1 12 1.5 19.5t.5 14.5q0 150-105 255T480 936Zm0-60q109 0 190-67.5T771 650q-25 11-53.667 16.5Q688.667 672 660 672q-114.689 0-195.345-80.655Q384 510.689 384 396q0-24 5-51.5t18-62.5q-98 27-162.5 109.5T180 576q0 125 87.5 212.5T480 876Zm-4-297Z"/></svg>
+				<svg class="lqd-dark-switch-icon grid-area-1-1 transition-transform w-1em h-auto" data-dark-switch-icon="light" fill="currentColor" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20"><path d="M479.765 716Q538 716 579 675.235q41-40.764 41-99Q620 518 579.235 477q-40.764-41-99-41Q422 436 381 476.765q-41 40.764-41 99Q340 634 380.765 675q40.764 41 99 41Zm.235 60q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM70 606q-12.75 0-21.375-8.675Q40 588.649 40 575.825 40 563 48.625 554.5T70 546h100q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T170 606H70Zm720 0q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T790 546h100q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T890 606H790ZM479.825 296Q467 296 458.5 287.375T450 266V166q0-12.75 8.675-21.375 8.676-8.625 21.5-8.625 12.825 0 21.325 8.625T510 166v100q0 12.75-8.675 21.375-8.676 8.625-21.5 8.625Zm0 720q-12.825 0-21.325-8.62-8.5-8.63-8.5-21.38V886q0-12.75 8.675-21.375 8.676-8.625 21.5-8.625 12.825 0 21.325 8.625T510 886v100q0 12.75-8.675 21.38-8.676 8.62-21.5 8.62ZM240 378l-57-56q-9-9-8.629-21.603.37-12.604 8.526-21.5 8.896-8.897 21.5-8.897Q217 270 226 279l56 57q8 9 8 21t-8 20.5q-8 8.5-20.5 8.5t-21.5-8Zm494 495-56-57q-8-9-8-21.375T678.5 774q8.5-9 20.5-9t21 9l57 56q9 9 8.629 21.603-.37 12.604-8.526 21.5-8.896 8.897-21.5 8.897Q743 882 734 873Zm-56-495q-9-9-9-21t9-21l56-57q9-9 21.603-8.629 12.604.37 21.5 8.526 8.897 8.896 8.897 21.5Q786 313 777 322l-57 56q-8 8-20.364 8-12.363 0-21.636-8ZM182.897 873.103q-8.897-8.896-8.897-21.5Q174 839 183 830l57-56q8.8-9 20.9-9 12.1 0 20.709 9Q291 783 291 795t-9 21l-56 57q-9 9-21.603 8.629-12.604-.37-21.5-8.526ZM480 576Z"/></svg>
+			</label>
+		</div>
+
+				</div>
+				</div>
+		<script>
+		window.liquid.behaviors.push( {
+			dataId: "749b5749",
+			behaviors:[
+				{behaviorName:'liquidSwitch',options:{useLocalStorage:true,attrs:[{key:'lqd-page-color-scheme',attr:'data-lqd-page-color-scheme',val:{on:'dark',off:'light'},el:'body'}]}},
+			]
+		} );
+		
+		</script>		<div class="elementor-element elementor-element-6dc46702 elementor-hidden-mobile elementor-widget elementor-widget-lqd-button" data-id="6dc46702" data-element_type="widget" data-widget_type="lqd-button.default">
+				<div class="elementor-widget-container">
+			
+		<a href="#" role="button" class="lqd-btn inline-flex items-center relative lqd-group lqd-group-btn lqd-btn-has-hover-bg" data-lqd-local-scroll-el=""><span class="lqd-bg-el rounded-inherit transition-opacity lqd-group-btn-hover:opacity-0 hidden-if-empty"></span><span class="lqd-hover-bg-el lqd-el-visible-on-hover rounded-inherit transition-opacity opacity-0 lqd-group-btn-hover:opacity-100 hidden-if-empty"><span class="lqd-bg-layer lqd-color-wrap lqd-bg-color-wrap block w-full h-full rounded-inherit overflow-hidden elementor-repeater-item-efbe427-6dc46702 absolute top-0 start-0 z-0"></span></span>
+						<span class="lqd-dark-bg-wrap hidden rounded-inherit lqd-dark:block hidden-if-empty">				<span class="lqd-bg-hover-wrap lqd-el-visible-on-hover rounded-inherit overflow-hidden opacity-0 transition-opacity lqd-group-btn-hover:opacity-100">
+				<span class="lqd-bg-layer lqd-color-wrap lqd-bg-color-wrap block w-full h-full rounded-inherit overflow-hidden elementor-repeater-item-f203efa-6dc46702 absolute top-0 start-0 z-0"></span>				</span>
+				</span>
+			<span class="lqd-btn-txt relative z-1">Sign in</span></a>
+
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5ec4783b elementor-widget elementor-widget-lqd-button" data-id="5ec4783b" data-element_type="widget" data-widget_type="lqd-button.default">
+				<div class="elementor-widget-container">
+			
+		<a href="#" role="button" class="lqd-btn inline-flex items-center relative lqd-group lqd-group-btn lqd-btn-has-bg" data-lqd-local-scroll-el=""><span class="lqd-bg-layer lqd-animated-gradient-wrap lqd-bg-animated-gradient-wrap block w-full h-full rounded-inherit overflow-hidden elementor-repeater-item-a674061-5ec4783b absolute top-0 start-0 z-0">
+			<svg width="100" height="100" class="absolute top-0 start-0 w-full h-full" preserveAspectRatio="none">
+				<defs>
+					<linearGradient id="lqd-bg-gradient-5ec4783b" x1="0" y1="0.5" x2="1" y2="0.5">
+						<stop offset="0%" stop-color="#E9C4E6">
+							<animate dur="8" repeatCount="indefinite" attributeName="stop-color" values="#E9C4E6;#D2CDE2;#EAEDFB;#E9C4E6"></animate>
+						</stop>
+						<stop offset="100%" stop-color="#ECEAF8">
+							<animate dur="8" repeatCount="indefinite" attributeName="stop-color" values="#ECEAF8;#CB7FE0;#EAEDFB;#ECEAF8"></animate>
+						</stop>
+					</linearGradient>
+				</defs>
+				<rect width="100%" height="100%" class="w-full h-full" fill="url(#lqd-bg-gradient-5ec4783b)" />
+			</svg>
+		</span><span class="lqd-btn-txt relative z-1">Join AIHub</span></a>
+
+				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-414e8e22 elementor-fixed elementor-widget elementor-widget-lqd-button" data-id="414e8e22" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;fixed&quot;}" data-widget_type="lqd-button.default">
+				<div class="elementor-widget-container">
+			
+		<a href="https://themeforest.net/item/aihub-ai-powered-startup-technology-wordpress-theme/47473638?s_rank=1" target="_blank" rel="nofollow" role="button" class="lqd-btn inline-flex items-center relative lqd-group lqd-group-btn lqd-btn-has-bg lqd-btn-has-hover-bg" data-lqd-local-scroll-el=""><span class="lqd-bg-el rounded-inherit transition-opacity lqd-group-btn-hover:opacity-0 hidden-if-empty"><span class="lqd-bg-layer lqd-color-wrap lqd-bg-color-wrap block w-full h-full rounded-inherit overflow-hidden elementor-repeater-item-d73ef4c-414e8e22 absolute top-0 start-0 z-0"></span></span><span class="lqd-hover-bg-el lqd-el-visible-on-hover rounded-inherit transition-opacity opacity-0 lqd-group-btn-hover:opacity-100 hidden-if-empty"><span class="lqd-bg-layer lqd-color-wrap lqd-bg-color-wrap block w-full h-full rounded-inherit overflow-hidden elementor-repeater-item-b766fe4-414e8e22 absolute top-0 start-0 z-0"></span></span>
+			</a>
+
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-0114bd6 e-flex e-con-boxed e-con e-parent" data-id="0114bd6" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-7a3fd69 elementor-widget elementor-widget-link-in-bio" data-id="7a3fd69" data-element_type="widget" data-widget_type="link-in-bio.default">
+				<div class="elementor-widget-container">
+					<div class="e-link-in-bio e-link-in-bio">
+			<div class="e-link-in-bio__content">
+
+						<div class="e-link-in-bio__identity">
+									<div class="e-link-in-bio__identity-image e-link-in-bio__identity-image-profile has-style-circle">
+							<img fetchpriority="high" decoding="async" width="212" height="300" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/12121-212x300.jpg" class="e-link-in-bio__identity-image-element" alt="" srcset="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/12121-212x300.jpg 212w, https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/12121.jpg 297w" sizes="(max-width: 212px) 100vw, 212px" />													</div>
+							</div>
+					<div class="e-link-in-bio__bio">
+				<h2 class="e-link-in-bio__heading">Rahul R</h2>				<h3 class="e-link-in-bio__title">Frontend Developer</h3>								<p class="e-link-in-bio__description">I love making wesites look great🪶</p>			</div>
+					<div class="e-link-in-bio__icons has-size-small">
+							<div class="e-link-in-bio__icon is-size-small">
+					<a target="_blank" rel="noopener " aria-label="Instagram" class="e-link-in-bio__icon-link" href="">
+						<span class="e-link-in-bio__icon-svg">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>						</span>
+											</a>
+				</div>
+							<div class="e-link-in-bio__icon is-size-small">
+					<a aria-label="Email" class="e-link-in-bio__icon-link" href="">
+						<span class="e-link-in-bio__icon-svg">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fas-envelope" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg>						</span>
+											</a>
+				</div>
+					</div>
+		
+		<div class="e-link-in-bio__ctas has-type-button">
+							<a target="_blank" rel="noopener " class="e-link-in-bio__cta is-type-button has-corners-rounded" href="">
+										<span class="e-link-in-bio__cta-text">
+						contact me..					</span>
+				</a>
+					</div>
+		
+			</div>
+			<div class="e-link-in-bio__bg">
+				<div class="e-link-in-bio__bg-overlay"></div>
+			</div>
+		</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-a791940 e-flex e-con-boxed e-con e-parent" data-id="a791940" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-c8f20dc elementor-widget elementor-widget-lqd-glow" data-id="c8f20dc" data-element_type="widget" data-widget_type="lqd-glow.default">
+				<div class="elementor-widget-container">
+			
+		<svg class="w-full h-full" width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<circle cx="32.5" cy="32.5" r="32.5" fill="url(#paint_c8f20dc)"/>
+			<defs>
+				<linearGradient id="paint_c8f20dc" x1="0" y1="0" x2="65" y2="65" gradientUnits="userSpaceOnUse">
+					<stop offset="0" stop-color="#f8f7a1">
+						<animate attributeName="stop-color" values="#f8f7a1;#b185fe;#53fd87;#f8f7a1;" dur="4.25s" repeatCount="indefinite"></animate>
+					</stop>
+					<stop offset="1" stop-color="#ff9c00">
+						<animate attributeName="stop-color" values="#ff9c00;#6ed5fb;#ff7274;#ff9c00;" dur="4.25s" repeatCount="indefinite"></animate>
+					</stop>
+				</linearGradient>
+			</defs>
+		</svg>
+
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-a1a1b0a e-flex e-con-boxed e-con e-parent" data-id="a1a1b0a" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-6d816bf elementor-headline--style-highlight elementor-widget elementor-widget-animated-headline" data-id="6d816bf" data-element_type="widget" data-settings="{&quot;marker&quot;:&quot;curly&quot;,&quot;highlighted_text&quot;:&quot;the&quot;,&quot;headline_style&quot;:&quot;highlight&quot;,&quot;loop&quot;:&quot;yes&quot;,&quot;highlight_animation_duration&quot;:1200,&quot;highlight_iteration_delay&quot;:8000}" data-widget_type="animated-headline.default">
+				<div class="elementor-widget-container">
+					<h4 class="elementor-headline">
+					<span class="elementor-headline-plain-text elementor-headline-text-wrapper">Meet </span>
+				<span class="elementor-headline-dynamic-wrapper elementor-headline-text-wrapper">
+					<span class="elementor-headline-dynamic-text elementor-headline-text-active">the</span>
+				</span>
+					<span class="elementor-headline-plain-text elementor-headline-text-wrapper">Team</span>
+					</h4>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-b16ac7a e-flex e-con-boxed e-con e-parent" data-id="b16ac7a" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-4ff6a79 e-con-full e-flex e-con e-child" data-id="4ff6a79" data-element_type="container">
+				<div class="elementor-element elementor-element-dbbc826 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews" data-id="dbbc826" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:6,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="reviews.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-c3bff4d">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/rahul/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/12121.jpg" alt="Rahul R">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Rahul R</span><span class="elementor-testimonial__title">Frontend Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-instagram"><svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-65c8cfd">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/rahul/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/12121.jpg" alt="Rahul R">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Rahul R</span><span class="elementor-testimonial__title">Frontend Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+									</div>
+															<div class="swiper-pagination"></div>
+																<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"></path></svg>							<span class="elementor-screen-only">Previous</span>
+						</div>
+						<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"></path></svg>							<span class="elementor-screen-only">Next</span>
+						</div>
+												</div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-3ae5896 e-con-full e-flex e-con e-child" data-id="3ae5896" data-element_type="container">
+				<div class="elementor-element elementor-element-a118a44 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews" data-id="a118a44" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:6,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="reviews.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-c3bff4d">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/vishal">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/Screenshot-2024-10-01-200022.png" alt="Vishal">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Vishal</span><span class="elementor-testimonial__title">Jr.Frontend Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-366b8da">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/vishal">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/Screenshot-2024-10-01-200022.png" alt="Vishal">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Vishal</span><span class="elementor-testimonial__title">Jr.Frontend Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+									</div>
+															<div class="swiper-pagination"></div>
+																<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"></path></svg>							<span class="elementor-screen-only">Previous</span>
+						</div>
+						<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"></path></svg>							<span class="elementor-screen-only">Next</span>
+						</div>
+												</div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-d703f46 e-con-full e-flex e-con e-child" data-id="d703f46" data-element_type="container">
+				<div class="elementor-element elementor-element-b4b0776 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews" data-id="b4b0776" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:6,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="reviews.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-c3bff4d">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/praveen/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/Screenshot-2024-10-05-194454.png" alt="Praveen Kumar">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Praveen Kumar</span><span class="elementor-testimonial__title">MEMBER14</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-a4ce1b8">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/praveen/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/Screenshot-2024-10-05-194454.png" alt="Praveen Kumar">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Praveen Kumar</span><span class="elementor-testimonial__title">MEMBER14</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+									</div>
+															<div class="swiper-pagination"></div>
+																<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"></path></svg>							<span class="elementor-screen-only">Previous</span>
+						</div>
+						<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"></path></svg>							<span class="elementor-screen-only">Next</span>
+						</div>
+												</div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b7a2740 e-con-full e-flex e-con e-child" data-id="b7a2740" data-element_type="container">
+				<div class="elementor-element elementor-element-7f3eefe elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews" data-id="7f3eefe" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:6,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="reviews.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-c3bff4d">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/sofi/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://i.pinimg.com/736x/69/a5/60/69a5602fb6377d1fef9bb45e8db9e415.jpg" alt="Sufiyan">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Sufiyan</span><span class="elementor-testimonial__title">Python Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-a31807f">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/sofi/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://i.pinimg.com/736x/69/a5/60/69a5602fb6377d1fef9bb45e8db9e415.jpg" alt="Sufiyan">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Sufiyan</span><span class="elementor-testimonial__title">Python Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+									</div>
+															<div class="swiper-pagination"></div>
+																<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"></path></svg>							<span class="elementor-screen-only">Previous</span>
+						</div>
+						<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"></path></svg>							<span class="elementor-screen-only">Next</span>
+						</div>
+												</div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-aa022d7 e-con-full e-flex e-con e-child" data-id="aa022d7" data-element_type="container">
+				<div class="elementor-element elementor-element-fc15129 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews" data-id="fc15129" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:6,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="reviews.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-c3bff4d">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/sanjay/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/Screenshot-2024-09-30-200154.png" alt="Sanju">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Sanju</span><span class="elementor-testimonial__title">Python Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-snapchat"><svg aria-hidden="true" class="e-font-icon-svg e-fab-snapchat" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm169.5 338.9c-3.5 8.1-18.1 14-44.8 18.2-1.4 1.9-2.5 9.8-4.3 15.9-1.1 3.7-3.7 5.9-8.1 5.9h-.2c-6.2 0-12.8-2.9-25.8-2.9-17.6 0-23.7 4-37.4 13.7-14.5 10.3-28.4 19.1-49.2 18.2-21 1.6-38.6-11.2-48.5-18.2-13.8-9.7-19.8-13.7-37.4-13.7-12.5 0-20.4 3.1-25.8 3.1-5.4 0-7.5-3.3-8.3-6-1.8-6.1-2.9-14.1-4.3-16-13.8-2.1-44.8-7.5-45.5-21.4-.2-3.6 2.3-6.8 5.9-7.4 46.3-7.6 67.1-55.1 68-57.1 0-.1.1-.2.2-.3 2.5-5 3-9.2 1.6-12.5-3.4-7.9-17.9-10.7-24-13.2-15.8-6.2-18-13.4-17-18.3 1.6-8.5 14.4-13.8 21.9-10.3 5.9 2.8 11.2 4.2 15.7 4.2 3.3 0 5.5-.8 6.6-1.4-1.4-23.9-4.7-58 3.8-77.1C183.1 100 230.7 96 244.7 96c.6 0 6.1-.1 6.7-.1 34.7 0 68 17.8 84.3 54.3 8.5 19.1 5.2 53.1 3.8 77.1 1.1.6 2.9 1.3 5.7 1.4 4.3-.2 9.2-1.6 14.7-4.2 4-1.9 9.6-1.6 13.6 0 6.3 2.3 10.3 6.8 10.4 11.9.1 6.5-5.7 12.1-17.2 16.6-1.4.6-3.1 1.1-4.9 1.7-6.5 2.1-16.4 5.2-19 11.5-1.4 3.3-.8 7.5 1.6 12.5.1.1.1.2.2.3.9 2 21.7 49.5 68 57.1 4 1 7.1 5.5 4.9 10.8z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-842b8ca">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/sanjay/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/10/Screenshot-2024-09-30-200154.png" alt="Sanju">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">Sanju</span><span class="elementor-testimonial__title">Python Developer</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-snapchat"><svg aria-hidden="true" class="e-font-icon-svg e-fab-snapchat" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm169.5 338.9c-3.5 8.1-18.1 14-44.8 18.2-1.4 1.9-2.5 9.8-4.3 15.9-1.1 3.7-3.7 5.9-8.1 5.9h-.2c-6.2 0-12.8-2.9-25.8-2.9-17.6 0-23.7 4-37.4 13.7-14.5 10.3-28.4 19.1-49.2 18.2-21 1.6-38.6-11.2-48.5-18.2-13.8-9.7-19.8-13.7-37.4-13.7-12.5 0-20.4 3.1-25.8 3.1-5.4 0-7.5-3.3-8.3-6-1.8-6.1-2.9-14.1-4.3-16-13.8-2.1-44.8-7.5-45.5-21.4-.2-3.6 2.3-6.8 5.9-7.4 46.3-7.6 67.1-55.1 68-57.1 0-.1.1-.2.2-.3 2.5-5 3-9.2 1.6-12.5-3.4-7.9-17.9-10.7-24-13.2-15.8-6.2-18-13.4-17-18.3 1.6-8.5 14.4-13.8 21.9-10.3 5.9 2.8 11.2 4.2 15.7 4.2 3.3 0 5.5-.8 6.6-1.4-1.4-23.9-4.7-58 3.8-77.1C183.1 100 230.7 96 244.7 96c.6 0 6.1-.1 6.7-.1 34.7 0 68 17.8 84.3 54.3 8.5 19.1 5.2 53.1 3.8 77.1 1.1.6 2.9 1.3 5.7 1.4 4.3-.2 9.2-1.6 14.7-4.2 4-1.9 9.6-1.6 13.6 0 6.3 2.3 10.3 6.8 10.4 11.9.1 6.5-5.7 12.1-17.2 16.6-1.4.6-3.1 1.1-4.9 1.7-6.5 2.1-16.4 5.2-19 11.5-1.4 3.3-.8 7.5 1.6 12.5.1.1.1.2.2.3.9 2 21.7 49.5 68 57.1 4 1 7.1 5.5 4.9 10.8z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+									</div>
+															<div class="swiper-pagination"></div>
+																<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"></path></svg>							<span class="elementor-screen-only">Previous</span>
+						</div>
+						<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0">
+							<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg"><path d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"></path></svg>							<span class="elementor-screen-only">Next</span>
+						</div>
+												</div>
+		</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-061b9d6 e-con-full e-flex e-con e-child" data-id="061b9d6" data-element_type="container">
+				<div class="elementor-element elementor-element-99368f6 elementor-arrows-yes elementor-pagination-type-bullets elementor-review--has-separator elementor--star-style-star_fontawesome elementor-widget elementor-widget-reviews" data-id="99368f6" data-element_type="widget" data-settings="{&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:6,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;pagination&quot;:&quot;bullets&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="reviews.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-swiper">
+			<div class="elementor-main-swiper swiper">
+				<div class="swiper-wrapper">
+											<div class="swiper-slide">
+									<div class="elementor-testimonial elementor-repeater-item-c3bff4d">
+							<a class="elementor-testimonial__header" href="https://ai-team.netlify.app/apply/">
+											<div class="elementor-testimonial__image">
+							<img decoding="async" src="https://dev-gcu.pantheonsite.io/wp-content/uploads/2024/09/image-layer-6469c993cafe6f68c8b8b603@2x-1.png" alt="MEMBER16">
+													</div>
+										<cite class="elementor-testimonial__cite"><span class="elementor-testimonial__name">MEMBER16</span><span class="elementor-testimonial__title">Backend Team</span></cite>					<div class="elementor-testimonial__icon elementor-icon elementor-icon-twitter"><svg aria-hidden="true" class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><span class="elementor-screen-only">Read More</span></div>				</a>
+								</div>
+								</div>
+									</div>
+							</div>
+		</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-ac55207 e-flex e-con-boxed e-con e-parent" data-id="ac55207" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-f099ab1 elementor-widget elementor-widget-lqd-glow" data-id="f099ab1" data-element_type="widget" data-widget_type="lqd-glow.default">
+				<div class="elementor-widget-container">
+			
+		<svg class="w-full h-full" width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+			<circle cx="32.5" cy="32.5" r="32.5" fill="url(#paint_f099ab1)"/>
+			<defs>
+				<linearGradient id="paint_f099ab1" x1="0" y1="0" x2="65" y2="65" gradientUnits="userSpaceOnUse">
+					<stop offset="0" stop-color="#f8f7a1">
+						<animate attributeName="stop-color" values="#f8f7a1;#b185fe;#53fd87;#f8f7a1;" dur="4.25s" repeatCount="indefinite"></animate>
+					</stop>
+					<stop offset="1" stop-color="#ff9c00">
+						<animate attributeName="stop-color" values="#ff9c00;#6ed5fb;#ff7274;#ff9c00;" dur="4.25s" repeatCount="indefinite"></animate>
+					</stop>
+				</linearGradient>
+			</defs>
+		</svg>
+
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-2fa2d4a2 e-flex e-con-boxed e-con e-parent" data-id="2fa2d4a2" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-122d76ed elementor-widget-mobile__width-inherit elementor-widget elementor-widget-lqd_site_logo" data-id="122d76ed" data-element_type="widget" data-widget_type="lqd_site_logo.default">
+				<div class="elementor-widget-container">
+			
+		<a class="lqd-logo flex p-0 relative" href="https://dev-gcu.pantheonsite.io/" rel="home"><img decoding="async" class="lqd-logo-dark hidden lqd-dark:block" src="https://staging.liquid-themes.com/ai-creative/wp-content/uploads/2023/08/logo-light.svg" alt="Aiair" />  <img decoding="async" class="lqd-logo-default lqd-dark:hidden" src="https://staging.liquid-themes.com/ai-creative/wp-content/uploads/2023/08/logo.svg" alt="Aiair" /></a>
+				</div>
+				</div>
+				<nav class="elementor-element elementor-element-1e8a83b9 elementor-widget elementor-widget-lqd-menu lqd-widget-container-flex lqd-widget-container-items-center" data-id="1e8a83b9" data-element_type="widget" data-widget_type="lqd-menu.default" data-lqd-menu-dropdown-position-applied="false">
+				<div class="elementor-widget-container">
+			<div class="lqd-menu-wrap [&amp;.lqd-is-active:flex] grow"><ul class="lqd-menu-ul lqd-menu-ul-top flex items-center grow list-none transition-colors ">
+			<li id="menu-item-4c356fa" class="menu-item lqd-menu-li relative lqd-menu-li-top elementor-repeater-item-4c356fa">
+							<a class="lqd-menu-link lqd-menu-link-top flex items-center transition-all" href="#">Home</a>
+					</li>
+
+			
+			<li id="menu-item-3b3fe87" class="menu-item lqd-menu-li relative lqd-menu-li-top elementor-repeater-item-3b3fe87">
+							<a class="lqd-menu-link lqd-menu-link-top flex items-center transition-all" href="#">Team</a>
+					</li>
+
+			</ul></div>		</div>
+				</nav>
+		<script>
+		window.liquid.behaviors.push( {
+			dataId: "1e8a83b9",
+			behaviors:[
+				{behaviorName:'liquidToggle',options:{disableOnTouch:true,changePropPrefix:'lqdMenuSubmenu-1e8a83b9',ui:{togglableTriggers:'.menu-item-has-children',togglableElements:'.lqd-menu-dropdown'},triggerElements:['pointerenter @togglableTriggers','pointerleave @togglableTriggers']}},{behaviorName:'liquidDropdown'},{behaviorName:'liquidToggle',options:{changePropPrefix:'lqdMenuMobileToggle-1e8a83b9',ui:{togglableTriggers:'.lqd-dropdown-trigger',togglableElements:'.lqd-menu-dropdown'},triggerElements:['click @togglableTriggers']}},{behaviorName:'liquidEffectsSlideToggle',options:{changePropPrefix:'lqdMenuMobileToggle-1e8a83b9',keepHiddenClassname:false}},{behaviorName:'liquidGetElementComputedStyles',options:{getRect:true,includeSelf:true}},
+			]
+		} );
+		
+		</script>		<div class="elementor-element elementor-element-515ecbeb elementor-widget__width-inherit elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="515ecbeb" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-641b69fd lqd-text-tag-p elementor-widget__width-initial elementor-widget elementor-widget-lqd-text" data-id="641b69fd" data-element_type="widget" data-widget_type="lqd-text.default">
+				<div class="elementor-widget-container">
+			<p class="lqd-text-el m-0 p-0"><span class="lqd-text-item relative elementor-repeater-item-a236063">We're a team where it took a future of code. Develop new software's collaboratively network.</span></p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4651a83b elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="4651a83b" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-social-icons-wrapper elementor-grid">
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-86e1650" target="_blank">
+						<span class="elementor-screen-only">Twitter</span>
+						<svg class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-736ae47" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-14527ce3 elementor-absolute elementor-widget elementor-widget-lqd-particles" data-id="14527ce3" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="lqd-particles.default">
+				<div class="elementor-widget-container">
+			
+		<div class="lqd-particles-container" id="lqd-particles-14527ce3"></div>
+
+					<script>
+				(() => {
+					async function run() {
+						const el = document.querySelector('.elementor-element-14527ce3');
+						const particles = await tsParticles.load('lqd-particles-14527ce3', {"particles":{"number":{"value":3},"color":{"value":"#000000"},"shape":{"type":["image"],"images":[{"src":"https:\/\/dev-gcu.pantheonsite.io\/wp-content\/uploads\/2024\/10\/cloud-2.png","width":160,"height":80},{"src":"https:\/\/dev-gcu.pantheonsite.io\/wp-content\/uploads\/2024\/10\/cloud-1.png","width":230,"height":100}]},"opacity":{"value":1},"size":{"value":100},"move":{"enable":true,"direction":"right","speed":1,"out_mode":"out"}},"interactivity":[],"retina_detect":true,"fullScreen":false});
+						particles.pause();
+						new IntersectionObserver(([entry]) => {
+							if ( entry.isIntersecting ) {
+								particles.play();
+							} else {
+								particles.pause();
+							}
+						}).observe(el);
+					}
+					if ( typeof tsParticles === 'object' ) {
+						run();
+					} else {
+						document.addEventListener('DOMContentLoaded', function () {
+							run();
+						}, false);
+					}
+				})();
+			</script>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+	
+		</div><!-- /.lqd-contents -->		</div>
+			</main>
+	<footer class="lqd-site-footer" id="lqd-page-footer-wrap" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+
+	
+	<div id="lqd-page-footer" data-lqd-view="liquidPageFooter">
+		<style>.elementor-5663 .elementor-element.elementor-element-3c7b88d{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;}</style>		<div data-elementor-type="wp-post" data-elementor-id="5663" class="elementor elementor-5663" data-elementor-post-type="liquid-footer">
+				<div class="elementor-element elementor-element-3c7b88d e-flex e-con-boxed e-con e-parent" data-id="3c7b88d" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2852601 elementor-widget elementor-widget-text-editor" data-id="2852601" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p style="text-align: center;"><a href="https://dev-gcu.pantheonsite.io/main/" target="_blank" rel="cc:attributionURL noopener noreferrer"><span style="color: #0000ff;">Attendance Tracker</span> </a>© 2024 by<span style="color: #0000ff;"> </span><a href="https://dev-gcu.pantheonsite.io/rahul/" target="_blank" rel="cc:attributionURL noopener noreferrer"><span style="color: #0000ff;">rahul</span> </a>is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer"><span style="color: #0000ff;">Creative Commons Attribution-NonCommercial 4.0 International</span> <span class="icon" data-v-a0d4e8a8=""><img src="https://chooser-beta.creativecommons.org/img/cc-by.21b728bb.svg" width="20" height="20" data-v-a0d4e8a8="" /><img src="https://chooser-beta.creativecommons.org/img/cc-nc.218f18fc.svg" width="20" height="20" data-v-a0d4e8a8="" /></span></a><img src="https://chooser-beta.creativecommons.org/img/cc-logo.f0ab4ebe.svg" width="20" height="20" data-v-a0d4e8a8="" /></p>						</div>
+				</div>
+					</div>
+				</div>
+				</div>
+			</div>
+</footer>
+			<div id="lqd-gdpr" class="lqd-gdpr">
+				<div class="lqd-gdpr-inner">
+					<div class="lqd-gdpr-left">🍪 This website uses cookies to improve your web experience.</div>
+					<div class="lqd-gdpr-right"><button class="lqd-gdpr-accept">Accept</button></div>
+				</div>
+			</div>
+		
+    </div><!-- /#lqd-wrap -->
+
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+    // Function to remove the popup
+    function removePopup() {
+        var popup = $('a[href="https://themeforest.net/item/aihub-ai-powered-startup-technology-wordpress-theme/47473638?s_rank=1"]');
+        if (popup.length) {
+            popup.remove();
+            console.log('Popup removed');
+        }
+    }
+
+    // Continuously check for the popup every 500 milliseconds
+    var intervalId = setInterval(function() {
+        removePopup();
+        // Optionally, stop the interval if the popup is removed
+        var popupStillPresent = $('a[href="https://themeforest.net/item/aihub-ai-powered-startup-technology-wordpress-theme/47473638?s_rank=1"]').length;
+        if (!popupStillPresent) {
+            clearInterval(intervalId);
+        }
+    }, 500);
+});
+</script>
+			<script type='text/javascript'>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+				<script>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-css' href='https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-9.1.4' media='all' />
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.1.4" id="sourcebuster-js-js"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/dev-gcu.pantheonsite.io\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.1.4" id="wc-order-attribution-js"></script>
+<script id="wp-consent-api-js-extra">
+var consent_api = {"consent_type":"","waitfor_consent_hook":"","cookie_expiration":"30","cookie_prefix":"wp_consent"};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/wp-consent-api/assets/js/wp-consent-api.min.js?ver=1.0.7" id="wp-consent-api-js"></script>
+<script id="wp-consent-api-integration-js-before">
+window.wc_order_attribution.params.consentCategory = "marketing";
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/woocommerce/assets/js/frontend/wp-consent-api-integration.min.js?ver=9.1.4" id="wp-consent-api-integration-js"></script>
+<script id="wp-statistics-tracker-js-extra">
+var WP_Statistics_Tracker_Object = {"requestUrl":"https:\/\/dev-gcu.pantheonsite.io\/wp-json\/wp-statistics\/v2","ajaxUrl":"https:\/\/dev-gcu.pantheonsite.io\/wp-admin\/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"page","source_id":7261,"search_query":"","signature":"ec2ef0545fce7c89519a83a222d41f26","endpoint":"hit"},"onlineParams":{"wp_statistics_hit":1,"source_type":"page","source_id":7261,"search_query":"","signature":"ec2ef0545fce7c89519a83a222d41f26","endpoint":"online"},"option":{"userOnline":"1","consentLevel":"disabled","dntEnabled":"","bypassAdBlockers":"","isWpConsentApiActive":true,"trackAnonymously":false,"isPreview":false},"jsCheckTime":"60000"};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/wp-statistics/assets/js/tracker.js?ver=14.10.1" id="wp-statistics-tracker-js"></script>
+<script id="liquid-ajax-filter-js-extra">
+var wcLiquid = {"ajaxUrl":"https:\/\/dev-gcu.pantheonsite.io\/wp-admin\/admin-ajax.php","termId":"","paged":"1","options":{"wcHiddenSidebar":"off","wcAjaxFilter":"off","wcAjaxPagination":"off","wcAjaxPaginationType":"classic","wcAjaxPaginationButtonText":"Load more products"}};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/liquid/vendors/woocommerce/js/liquid-ajax-filter.js" id="liquid-ajax-filter-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-consent-mode-3d6495dceaebc28bcca3.js" id="googlesitekit-consent-mode-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/fastdom/fastdom.min.js" id="fastdom-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/fastdom/fastdom-promised.js" id="fastdom-promised-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/underscore.min.js?ver=1.13.4" id="underscore-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/backbone.min.js?ver=1.5.0" id="backbone-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/backbone-native/backbone.native.min.js" id="backbone-native-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/gsap/minified/gsap.min.js" id="gsap-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/gsap/minified/ScrollTrigger.min.js" id="gsap-scrolltrigger-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/gsap/minified/ScrollToPlugin.min.js" id="gsap-scrollto-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/gsap/minified/DrawSVGPlugin.min.js" id="gsap-draw-svg-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/lib/consts.js" id="LiquidLibConsts-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/utils/collide.js" id="LiquidUtilsCollide-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/utils/colors.js" id="LiquidUtilsColors-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/utils/getElementFromString.js" id="LiquidUtilsGetElementFromString-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/utils/getSize.js" id="LiquidUtilsGetSize-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/utils/modulo.js" id="LiquidUtilsModulo-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/models/base.js" id="LiquidModelsBase-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/models/widgets/base.js" id="LiquidModelsWidgetsBase-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/views/base.js" id="LiquidModelsViewsBase-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/base.js" id="LiquidBehaviorsBase-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/app.js" id="LiquidApp-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.24.2" id="elementor-webpack-runtime-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.24.2" id="elementor-frontend-modules-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.24.2","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"home_screen":true,"ai-layout":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true,"taxonomy-filter":true,"search":true},"urls":{"assets":"https:\/\/dev-gcu.pantheonsite.io\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/dev-gcu.pantheonsite.io\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"8b75886e7d"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","woocommerce_notices_elements":[]},"post":{"id":7261,"title":"Rahul%20%E2%80%93%20Aiair","excerpt":"","featuredImage":false}};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.24.2" id="elementor-frontend-js"></script>
+<script id="liquid-theme-inline-js-extra">
+var liquidTheme = {"uris":{"ajax":"https:\/\/dev-gcu.pantheonsite.io\/wp-admin\/admin-ajax.php","theme":"https:\/\/dev-gcu.pantheonsite.io\/wp-content\/themes\/aihub"}};
+</script>
+<script id="liquid-theme-inline-js-before">
+			window.liquidAppOptions = {
+				layoutRegions: {
+					liquidPageHeader: {
+						el: 'lqd-page-header-wrap',
+						contentWrap: 'lqd-page-header',
+						behaviors: [
+							{behaviorName:'liquidStickyHeader',options:[]},{behaviorName:'liquidGetElementComputedStyles',options:{includeSelf:true,getRect:true}},
+						]
+					},
+					liquidPageContent: {
+						el: 'lqd-page-content-wrap',
+						contentWrap: 'lqd-page-content',
+						behaviors: [],
+					},
+					liquidPageFooter: {
+						el: 'lqd-page-footer-wrap',
+						contentWrap: 'lqd-page-footer',
+					},
+				},
+                containersClassname: 'e-con',
+                containersBoxedClassname: 'e-con-boxed',
+                widgetsClassname: 'elementor-widget',
+			}
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/liquid/assets/js/theme-inline.js" id="liquid-theme-inline-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/sticky-header.js" id="LiquidStickyHeaderBehavior-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/liquid-gdpr/liquid-gdpr.min.js" id="liquid-gdpr-box-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/vendors/tsparticles/tsparticles.bundle.min.js" id="tsparticles-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor-pro/assets/lib/lottie/lottie.min.js?ver=5.6.6" id="lottie-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/switch.js" id="LiquidSwitchBehavior-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/toggle.js" id="LiquidToggleBehavior-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/dropdown.js" id="LiquidDropdownBehavior-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/toggle-slide.js" id="LiquidEffectsSlideToggleBehavior-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/themes/aihub/assets/js/minified/behaviors/get-element-computed-styles.js" id="LiquidGetElementComputedStylesBehavior-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.23.2" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18" id="wp-hooks-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/dev-gcu.pantheonsite.io\/wp-admin\/admin-ajax.php","nonce":"8582cdbb68","urls":{"assets":"https:\/\/dev-gcu.pantheonsite.io\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/dev-gcu.pantheonsite.io\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"woocommerce":{"menu_cart":{"cart_page_url":"https:\/\/dev-gcu.pantheonsite.io\/?page_id=7","checkout_page_url":"https:\/\/dev-gcu.pantheonsite.io\/?page_id=8","fragments_nonce":"02cf58ad0d"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/dev-gcu.pantheonsite.io\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.23.2" id="elementor-pro-frontend-js"></script>
+<script src="https://dev-gcu.pantheonsite.io/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.23.2" id="pro-elements-handlers-js"></script>
+<template id="lqd-temp-snickersbar">
+			<div class="lqd-snickersbar flex flex-wrap lqd-snickersbar-in" data-item-id>
+				<div class="lqd-snickersbar-inner flex flex-wrap items-center">
+					<div class="lqd-snickersbar-detail">
+						<p style="display: none;" class="lqd-snickersbar-addding-temp mt-0 mb-0">Adding {{itemName}} to cart</p>
+						<p style="display: none;" class="lqd-snickersbar-added-temp mt-0 mb-0">Added {{itemName}} to cart</p>
+						<p class="lqd-snickersbar-msg flex items-center mt-0 mb-0"></p>
+						<p class="lqd-snickersbar-msg-done flex items-center mt-0 mb-0"></p>
+					</div>
+					<div class="lqd-snickersbar-ext ms-24"></div>
+				</div>
+			</div>
+		</template><div class="lity" role="dialog" aria-label="Dialog Window (Press escape to close)" tabindex="-1" data-modal-type="default" style="display: none;">
+		<div class="lity-backdrop"></div>
+		<div class="lity-wrap" data-lity-close role="document">
+			<div class="lity-loader" aria-hidden="true">Loading...</div>
+			<div class="lity-container">
+				<div class="lity-content"></div>
+			</div>
+			<button class="lity-close" type="button" aria-label="Close (Press escape to close)" data-lity-close>&times;</button>
+		</div>
+	</div>
+    <svg class="hidden">
+        <defs>
+			<g id="lqd-loading-spinner">
+				<path d="M22 12c0 6-4.39 10-9.806 10C7.792 22 4.24 19.665 3 16"/><path d="M2 12C2 6 6.39 2 11.806 2 16.209 2 19.76 4.335 21 8"/><path d="M7 17l-4-1-1 4"/><path d="M17 7l4 1 1-4"/>
+			</g>
+			<g id="lqd-icon-check">
+				<path d="M4 12l6 6L20 6"/>
+			</g>
+			<g id="lqd-icon-chevron-left">
+				<path d="M15 4l-8 8 8 8"/>
+			</g>
+			<g id="lqd-icon-chevron-right">
+				<path d="M8 4l8 8-8 8"/>
+			</g>
+			<g id="lqd-icon-chevron-up">
+				<path d="M4 15l8-8 8 8"/>
+			</g>
+			<g id="lqd-icon-chevron-down">
+				<path d="M4 9l8 8 8-8"/>
+			</g>
+        </defs>
+    </svg>
 
 </body>
 </html>
+
+<!-- Page supported by LiteSpeed Cache 6.5.0.2 on 2024-10-10 15:00:38 -->
